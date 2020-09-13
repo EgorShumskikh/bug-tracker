@@ -1,0 +1,45 @@
+2020-09-11 23:02:54 INFO  ProjectController:218 - Список сформирован
+2020-09-11 23:02:54 INFO  ProjectController:212 - Задачи new Sprint 1:
+2020-09-11 23:02:54 INFO  ProjectController:216 - ЗадачаIssue{id=2, issueType=BUG, title='Задача 1', parentIsue=null, description='null', current workFlow status=Open Issue, priority=HI, creationDate=null, executor='User{id='1', lastName='null', firstName='Коба', patronymic='Иванович'}', reporter='null'}
+2020-09-11 23:02:54 INFO  ProjectController:216 - ЗадачаIssue{id=3, issueType=STORY, title='Задача 2', parentIsue=null, description='null', current workFlow status=Open Issue, priority=LOW, creationDate=2012-11-01, executor='User{id='2', lastName='Петров', firstName='null', patronymic='null'}', reporter='null'}
+2020-09-11 23:02:54 INFO  ProjectController:216 - ЗадачаIssue{id=7, issueType=BUG, title='Подзадача Задача 1', parentIsue=Issue{id=2, issueType=BUG, title='Задача 1', parentIsue=null, description='null', current workFlow status=Open Issue, priority=HI, creationDate=null, executor='User{id='1', lastName='null', firstName='Коба', patronymic='Иванович'}', reporter='null'}, description='null', current workFlow status=Open Issue, priority=HI, creationDate=null, executor='User{id='1', lastName='null', firstName='Коба', patronymic='Иванович'}', reporter='null'}
+2020-09-11 23:02:54 INFO  ProjectController:216 - ЗадачаIssue{id=8, issueType=TASK, title='Подзадача Задача 2', parentIsue=Issue{id=3, issueType=STORY, title='Задача 2', parentIsue=null, description='null', current workFlow status=Open Issue, priority=LOW, creationDate=2012-11-01, executor='User{id='2', lastName='Петров', firstName='null', patronymic='null'}', reporter='null'}, description='null', current workFlow status=Open Issue, priority=LOW, creationDate=2012-11-01, executor='User{id='2', lastName='Петров', firstName='null', patronymic='null'}', reporter='null'}
+2020-09-11 23:02:54 INFO  ProjectController:218 - Список сформирован
+2020-09-11 23:44:29 INFO  ProjectController:97 - Создан Project{id=1, title='null', description='null', departmentName='null', supervisor='null', admin='null'}
+2020-09-11 23:44:29 INFO  ProjectController:105 - Установлены новые значения в Project{id=1, title='3', description='4', departmentName='', supervisor='null', admin='null'}
+2020-09-11 23:44:47 INFO  ProjectController:97 - Создан Project{id=2, title='null', description='null', departmentName='null', supervisor='null', admin='null'}
+2020-09-11 23:44:47 INFO  ProjectController:105 - Установлены новые значения в Project{id=2, title='4', description='4', departmentName='', supervisor='null', admin='null'}
+2020-09-12 11:39:48 INFO  ProjectInitialize:97 - Создан Project{id=1, title='null', description='null', departmentName='null', supervisor='null', admin='null'}
+2020-09-12 11:39:48 INFO  ProjectInitialize:105 - Установлены новые значения в Project{id=1, title='4', description='4', departmentName='4', supervisor='null', admin='null'}
+2020-09-12 11:57:11 INFO  ProjectInitialize:85 - Создан Project{id=1, title='null', description='null', departmentName='null', supervisor='null', admin='null'}
+2020-09-12 11:57:11 INFO  ProjectInitialize:92 - Установлены новые значения в Project{id=1, title='1', description='2', departmentName='2', supervisor='null', admin='null'}
+2020-09-12 11:57:17 INFO  ProjectInitialize:206 - Создан WorkFlow{title='Standart Workflow'}
+2020-09-12 11:57:17 INFO  ProjectInitialize:213 - Статус Open Issue добавлен в WorkFlow{title='Standart Workflow'}
+2020-09-12 11:57:17 INFO  ProjectInitialize:213 - Статус Close Issue добавлен в WorkFlow{title='Standart Workflow'}
+2020-09-12 11:57:17 INFO  ProjectInitialize:129 - Созданa Issue{id=1, issueType=BUG, title='null', parentIsue=null, description='null', current workFlow status=Open Issue, priority=HI, creationDate=null, executor='null', reporter='null'}
+2020-09-12 12:16:19 INFO  ProjectInitialize:77 - Создан Project{id=1, title='null', description='null', departmentName='null', supervisor='null', admin='null'}
+2020-09-12 12:16:19 INFO  ProjectInitialize:84 - Установлены новые значения в Project{id=1, title='', description='', departmentName='', supervisor='null', admin='null'}
+2020-09-12 12:16:21 INFO  ProjectInitialize:197 - Создан WorkFlow{title='Standart Workflow'}
+2020-09-12 12:16:21 INFO  ProjectInitialize:204 - Статус Open Issue добавлен в WorkFlow{title='Standart Workflow'}
+2020-09-12 12:16:21 INFO  ProjectInitialize:204 - Статус Close Issue добавлен в WorkFlow{title='Standart Workflow'}
+2020-09-12 12:16:21 INFO  ProjectInitialize:121 - Созданa Issue{id=1, issueType=BUG, title='null', parentIsue=null, description='null', current workFlow status=Open Issue, priority=HI, creationDate=null, executor='null', reporter='null'}
+2020-09-13 19:19:23 INFO  MainFactory:78 - Create Project{id=1, title='null', description='null', departmentName='null', supervisor='null', admin='null'}
+2020-09-13 19:19:23 INFO  MainFactory:85 - New values are set in Project{id=1, title='4', description='4', departmentName='4', supervisor='null', admin='null'}
+2020-09-13 19:19:24 INFO  MainFactory:198 - Create WorkFlow{title='Standart Workflow'}
+2020-09-13 19:19:24 INFO  MainFactory:205 - Status  Open Issue add to WorkFlow{title='Standart Workflow'}
+2020-09-13 19:19:24 INFO  MainFactory:205 - Status  Close Issue add to WorkFlow{title='Standart Workflow'}
+2020-09-13 19:19:24 INFO  MainFactory:122 - Create Issue{id=1, issueType=BUG, title='null', parentIsue=null, description='null', current workFlow status=Open Issue, priority=HIGH, creationDate=null, executor='null', reporter='null'}
+2020-09-13 19:19:32 INFO  MainFactory:198 - Create WorkFlow{title='Standart Workflow'}
+2020-09-13 19:19:32 INFO  MainFactory:205 - Status  Open Issue add to WorkFlow{title='Standart Workflow'}
+2020-09-13 19:19:32 INFO  MainFactory:205 - Status  Close Issue add to WorkFlow{title='Standart Workflow'}
+2020-09-13 19:19:32 INFO  MainFactory:122 - Create Issue{id=2, issueType=BUG, title='null', parentIsue=null, description='null', current workFlow status=Open Issue, priority=HIGH, creationDate=null, executor='null', reporter='null'}
+2020-09-13 19:19:41 INFO  MainFactory:198 - Create WorkFlow{title='Standart Workflow'}
+2020-09-13 19:19:41 INFO  MainFactory:205 - Status  Open Issue add to WorkFlow{title='Standart Workflow'}
+2020-09-13 19:19:41 INFO  MainFactory:205 - Status  Close Issue add to WorkFlow{title='Standart Workflow'}
+2020-09-13 19:19:41 INFO  MainFactory:122 - Create Issue{id=3, issueType=EPIC, title='null', parentIsue=null, description='null', current workFlow status=Open Issue, priority=HIGH, creationDate=null, executor='null', reporter='null'}
+2020-09-13 19:20:27 INFO  MainFactory:106 - Create id=1
+2020-09-13 19:20:28 INFO  MainFactory:198 - Create WorkFlow{title='Standart Workflow'}
+2020-09-13 19:20:28 INFO  MainFactory:205 - Status  Open Issue add to WorkFlow{title='Standart Workflow'}
+2020-09-13 19:20:28 INFO  MainFactory:205 - Status  Close Issue add to WorkFlow{title='Standart Workflow'}
+2020-09-13 19:20:28 INFO  MainFactory:122 - Create Issue{id=4, issueType=EPIC, title='null', parentIsue=null, description='null', current workFlow status=Open Issue, priority=HIGH, creationDate=null, executor='null', reporter='null'}
+2020-09-13 19:20:28 INFO  MainFactory:178 - Moved to SprintIssue{id=4, issueType=EPIC, title='null', parentIsue=null, description='null', current workFlow status=Open Issue, priority=HIGH, creationDate=null, executor='null', reporter='null'}

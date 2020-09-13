@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="331.0" prefWidth="513.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.WorkflowController">
+   <children>
+      <Button fx:id="okButton" layoutX="236.0" layoutY="286.0" mnemonicParsing="false" text="OK" />
+      <ListView fx:id="currentWorkflowList" layoutX="25.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="availableWorkflowList" layoutX="286.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="25.0" layoutY="22.0" text="Current Workflow" />
+      <Label layoutX="286.0" layoutY="22.0" text="Available Statuses" />
+      <Button fx:id="addButton" layoutX="238.0" layoutY="115.0" mnemonicParsing="false" text="&lt;-" />
+      <Button fx:id="removeButton" layoutX="237.0" layoutY="153.0" mnemonicParsing="false" text="-&gt;" />
+   </children>
+</AnchorPane>

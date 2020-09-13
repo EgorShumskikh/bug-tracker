@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="main" prefHeight="509.0" prefWidth="464.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.IssueController">
+    <children>
+        <Label layoutX="286.0" layoutY="20.0" text="ID" />
+      <AnchorPane layoutX="14.0" layoutY="20.0" prefHeight="280.0" prefWidth="105.0">
+         <children>
+              <Label layoutY="224.0" text="Executor" AnchorPane.rightAnchor="0.0" />
+              <Label layoutY="154.0" text="Priority" AnchorPane.rightAnchor="0.0" />
+              <Label text="Type" AnchorPane.rightAnchor="0.0" />
+              <Label layoutY="41.0" text="Title" AnchorPane.rightAnchor="0.0" />
+              <Label layoutY="82.0" text="Parent Issue" AnchorPane.rightAnchor="0.0" />
+              <Label layoutY="189.0" text="Creation Date" AnchorPane.rightAnchor="0.0" />
+              <Label layoutY="259.0" text="Reporter" AnchorPane.rightAnchor="0.0" />
+              <Label layoutY="120.0" text="Status" AnchorPane.rightAnchor="0.0" />
+         </children>
+      </AnchorPane>
+        <Label layoutX="184.0" layoutY="349.0" text="Description" />
+        <TextField fx:id="id" disable="true" layoutX="319.0" layoutY="15.0" prefHeight="31.0" prefWidth="131.0" />
+        <TextField fx:id="title" layoutX="136.0" layoutY="56.0" prefHeight="31.0" prefWidth="314.0" />
+        <TextArea fx:id="description" layoutX="34.0" layoutY="381.0" prefHeight="71.0" prefWidth="383.0" />
+        <TextField fx:id="type" disable="true" layoutX="136.0" layoutY="15.0" prefHeight="31.0" prefWidth="80.0" />
+        <Button fx:id="saveChanges" layoutX="298.0" layoutY="464.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="119.0" text="Save and Quit" />
+        <Button fx:id="deleteIssue" layoutX="165.0" layoutY="464.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="119.0" text="Delete Issue" />
+        <ChoiceBox fx:id="priority" layoutX="141.0" layoutY="169.0" prefHeight="30.0" prefWidth="175.0" />
+        <DatePicker fx:id="creationDate" layoutX="141.0" layoutY="204.0" prefWidth="175.0" />
+        <Spinner fx:id="spinnerWorkFlow" layoutX="141.0" layoutY="135.0" prefWidth="175.0" />
+      <ChoiceBox fx:id="executor" layoutX="141.0" layoutY="239.0" prefHeight="31.0" prefWidth="175.0" />
+      <ChoiceBox fx:id="reporter" layoutX="141.0" layoutY="274.0" prefHeight="31.0" prefWidth="175.0" />
+      <Button fx:id="setWorkflowButton" layoutX="329.0" layoutY="135.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="119.0" text="Set Workflow" />
+      <TextField fx:id="parentIssueText" disable="true" layoutX="135.0" layoutY="95.0" prefHeight="31.0" prefWidth="314.0" />
+      <Button fx:id="createChildButton" layoutX="34.0" layoutY="464.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="119.0" text="Create Child" />
+    </children>
+</AnchorPane>

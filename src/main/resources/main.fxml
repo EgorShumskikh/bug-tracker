@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import project.view.userview.UserSearchForm?>
+<AnchorPane fx:id="mainPane" prefHeight="710.0" prefWidth="1217.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.MainController">
+    <children>
+        <AnchorPane fx:id="firstPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+            <children>
+                <GridPane hgap="5" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="130.0">
+
+                    <children>
+                        <ScrollPane fx:id="backlogScrollPane" fitToHeight="true" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: ivory" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <ChoiceBox fx:id="typeIssue" prefWidth="450.0" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+                        <ScrollPane fx:id="sprintScrollPane" fitToHeight="true" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: ivory" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                        <Button fx:id="newIssueInBacklog" maxWidth="Infinity" mnemonicParsing="false" onAction="#createNewIssueInBacklog" prefHeight="31.0" prefWidth="456.0" text="Create Issue in Backlog" />
+                        <Button fx:id="newIssueInSprint" maxWidth="Infinity" mnemonicParsing="false" onAction="#createNewIssueInSprint" prefHeight="31.0" prefWidth="561.0" text="Create Issue In Current Sprint" GridPane.columnIndex="4" />
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" prefWidth="1000.0" />
+                  <ColumnConstraints maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                        <ColumnConstraints maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="0.0" prefWidth="1000.0" />
+                  <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+                <Label fx:id="projectId" alignment="CENTER" contentDisplay="CENTER" layoutY="11.0" prefHeight="21.0" prefWidth="1114.0" text="Project ID" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="330.0">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+
+                <GridPane fx:id="sprintGroup" hgap="10.0" vgap="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="335.0" AnchorPane.topAnchor="50.0">
+                  <children>
+                   <Spinner fx:id="spinnerSprintId" onMousePressed="#changeCurrentSprint" minWidth="100" prefWidth="130.0" GridPane.columnIndex="1" />
+                   <Label alignment="BASELINE_RIGHT" minWidth="50" prefWidth="65" text="Sprint ID" GridPane.columnIndex="0" />
+                      <Label minWidth="65" prefWidth="150.0" text="Sprint Title" GridPane.rowIndex="1" />
+                   <TextField fx:id="sprintTitle" onKeyTyped="#changeTitle" alignment="BASELINE_LEFT" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="1" />
+                   <Label alignment="BASELINE_RIGHT" minWidth="65" prefWidth="150.0" text="Start Date" GridPane.columnIndex="2" />
+                   <DatePicker fx:id="sprintStartDate" onAction="#changeStartDate" prefHeight="31.0" prefWidth="250.0" GridPane.columnIndex="3" />
+                   <Label alignment="BASELINE_RIGHT" minWidth="65" prefWidth="150.0" text="Finish Date" GridPane.columnIndex="4" />
+                      <DatePicker fx:id="sprintFinishDate" onAction="#changeFinishDate" prefWidth="250.0" AnchorPane.rightAnchor="147.0" GridPane.columnIndex="5" />
+                  </children>
+               <columnConstraints>
+                  <ColumnConstraints maxWidth="75.0" prefWidth="75.0" />
+                  <ColumnConstraints maxWidth="130.0" prefWidth="130.0" />
+                  <ColumnConstraints maxWidth="75.0" prefWidth="75.0" />
+                  <ColumnConstraints maxWidth="130.0" prefWidth="130.0" />
+                  <ColumnConstraints maxWidth="75.0" prefWidth="75.0" />
+                  <ColumnConstraints maxWidth="130.0" prefWidth="130.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="185.0" prefWidth="250.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+                            <Button layoutX="747.0" layoutY="85.0" mnemonicParsing="false" onAction="#createNewSprint" prefHeight="31.0" prefWidth="210.0" text="Create Sprint" AnchorPane.rightAnchor="355.0" />
+            <GridPane hgap="15.0" prefWidth="330.0" vgap="12.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="0.0" prefWidth="110.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="35.0" prefWidth="60.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="10.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="110.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="35.0" prefWidth="60.0" />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="5.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="31.0" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="5.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="31.0" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" />
+                  <RowConstraints maxHeight="31.0" minHeight="31.0" prefHeight="31.0" />
+                  <RowConstraints minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="10.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="31.0" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="31.0" minHeight="31.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                  <RowConstraints />
+               </rowConstraints>
+               <children>
+                   <ListView fx:id="priority" onMouseClicked="#showPriorityFilter" AnchorPane.bottomAnchor="15.0" GridPane.columnSpan="3" GridPane.rowIndex="18" GridPane.rowSpan="2" />
+                      <CheckBox fx:id="checkPriority" layoutX="21.0" layoutY="489.0" mnemonicParsing="false" onAction="#showPriorityFilter" prefHeight="21.0" prefWidth="92.0" text="Priority" AnchorPane.bottomAnchor="90.0" GridPane.columnSpan="3" GridPane.rowIndex="17"/>
+                      <DatePicker fx:id="creationAfter" layoutX="278.0" layoutY="554.0" onAction="#showCreationAfterFilter" prefHeight="31.0" prefWidth="250.0" AnchorPane.bottomAnchor="15.0" GridPane.columnSpan="3" GridPane.rowIndex="12" />
+                      <DatePicker fx:id="creationBefore" layoutX="278.0" layoutY="489.0" onAction="#showCreationBeforeFilter" prefHeight="31.0" prefWidth="250.0" AnchorPane.bottomAnchor="80.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="12" />
+                     <CheckBox fx:id="checkAfter" layoutX="240.0" layoutY="554.0" mnemonicParsing="false" onAction="#showCreationAfterFilter" text="Creation After" AnchorPane.bottomAnchor="25.0" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+                      <CheckBox fx:id="checkBefore" layoutX="240.0" layoutY="489.0" mnemonicParsing="false" onAction="#showCreationBeforeFilter" text="Creation Before" AnchorPane.bottomAnchor="90.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+                  <CheckBox fx:id="checkTitle" mnemonicParsing="false" onAction="#showTitleFilter" prefHeight="21.0" prefWidth="102.0" text="Title" GridPane.columnSpan="2" GridPane.rowIndex="13" />
+                  <TextField fx:id="textTitle" prefHeight="31.0" prefWidth="250.0" GridPane.columnSpan="5" GridPane.rowIndex="14" />
+                  <Button fx:id="addTitle" mnemonicParsing="false" onAction="#addTitleToList" prefHeight="35.0" prefWidth="35.0" text="+" GridPane.columnIndex="5" GridPane.rowIndex="14" />
+                  <ListView fx:id="listTitle" prefWidth="250.0" GridPane.columnSpan="5" GridPane.rowIndex="15" GridPane.rowSpan="2" />
+                  <Button fx:id="removeTitle" maxWidth="35.0" mnemonicParsing="false" onAction="#removeTitleFromList" prefHeight="35.0" text="-" GridPane.columnIndex="5" GridPane.rowIndex="15" GridPane.valignment="TOP" />
+                  <ListView fx:id="reportersList" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="7" GridPane.rowSpan="2" />
+                  <ListView fx:id="executorsList" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="7" GridPane.rowSpan="2" />
+                   <UserSearchForm fx:id="myBox" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="7" GridPane.rowSpan="3" />
+                   <Button fx:id="addReporter" mnemonicParsing="false" onAction="#addUserToReporters" prefHeight="31.0" prefWidth="300.0" text="Add to Reporters" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+                  <Button fx:id="removeReporter" mnemonicParsing="false" onAction="#removeUserFromReporters" prefHeight="31.0" prefWidth="300.0" text="Remove" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                  <Button fx:id="addExecutor" mnemonicParsing="false" onAction="#addUserToExecutors" prefHeight="31.0" prefWidth="300.0" text="Add to Executors" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="4" />
+                  <Button fx:id="removeExecutor" mnemonicParsing="false" onAction="#removeUserFromExecutors" prefHeight="31.0" prefWidth="300.0" text="Remove" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                  <CheckBox fx:id="checkReporter" mnemonicParsing="false" onAction="#showReporterFilter" text="Reporter" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+                  <CheckBox fx:id="checkExecutor" mnemonicParsing="false" onAction="#showExecutorFilter" text="Executor" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="6" />
+                      <Button fx:id="refresh" mnemonicParsing="false" onAction="#updateScreenAfterFilter" prefHeight="31.0" prefWidth="310.0" text="Update Filters" GridPane.columnIndex="3" GridPane.columnSpan="3" GridPane.rowIndex="19" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </GridPane>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="30.0" prefWidth="950.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <MenuBar AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Project">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#createNewProject" text="New" />
+                                <MenuItem fx:id="menuEdit" disable="true" mnemonicParsing="false" onAction="#editCurrentProject" text="Edit"/>
+                                <MenuItem onAction="#selectProject" mnemonicParsing="false" text="Select" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="User">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#createNewUser" text="New" />
+                                <MenuItem mnemonicParsing="false" onAction="#selectUser" text="Select" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

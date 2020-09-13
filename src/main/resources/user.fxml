@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="290.0" prefWidth="513.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.UserController">
+   <children>
+      <Button fx:id="okButton" layoutX="208.0" layoutY="229.0" mnemonicParsing="false" text="OK" />
+      <Label layoutX="327.0" layoutY="19.0" text="ID" />
+      <Label layoutX="41.0" layoutY="81.0" text="First Name" />
+      <Label layoutX="41.0" layoutY="119.0" text="Last Name" />
+      <Label layoutX="41.0" layoutY="160.0" text="Patronymic" />
+      <TextField fx:id="id" disable="true" layoutX="362.0" layoutY="14.0" prefHeight="31.0" prefWidth="137.0" />
+      <TextField fx:id="firstName" layoutX="163.0" layoutY="76.0" prefHeight="31.0" prefWidth="333.0" />
+      <TextField fx:id="lastName" layoutX="163.0" layoutY="114.0" prefHeight="31.0" prefWidth="333.0" />
+      <TextField fx:id="patronymic" layoutX="163.0" layoutY="155.0" prefHeight="31.0" prefWidth="333.0" />
+   </children>
+</AnchorPane>

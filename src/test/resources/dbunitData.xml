@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <users_create id="1" first_name="Иван" last_name = "Иванов" patronymic = "Иванович" />
+    <users_update id="1" first_name="Коба" last_name = "" patronymic = "Иванович" />
+
+    <projects_create id="1" title="Проект 1" description = "Описание проекта 1" department_name = "Подразделение 1" supervisor_id="" admin_id="" current_sprint_id=""/>
+
+    <project_members_create id="1" users_id="1" projects_id = "1" />
+    <project_members_create id="2" users_id="2" projects_id = "1" />
+    <project_members_remove id="1" users_id="1" projects_id = "1" />
+
+    <projects_update id="1" title="Обновленный Проект 1" description = "Обновленное Описание проекта 1" department_name = "Обновленное Подразделение 1" supervisor_id="1" admin_id="2" current_sprint_id=""/>
+
+    <sprints_create id="1" project_id="1" title="sprint1" start_date="2020-6-1" finish_date="2020-7-1" />
+
+    <projects_create_sprint  id="1" title="Проект 1" description = "Описание проекта 1" department_name = "Подразделение 1" supervisor_id="" admin_id="" current_sprint_id="1"/>
+
+    <sprints_update id="1" project_id="1" title="sprint1-new" start_date="2022-6-1" finish_date="2022-7-3" />
+
+    <issues_create id="1" issue_type = "EPIC" title ="Главная задача" parent_issue_id = "" sprint_id="" backlog_id="1" description = "Описание" workflow_id="1" issue_priority="HI" creation_date="2012-11-1" executor_id="1" reporter_id="" current_status_of_workflow ="OPEN_ISSUE"/>
+
+    <issues_update id="1" issue_type = "EPIC" title ="Второстепенная задача" parent_issue_id = "" sprint_id="" backlog_id="1" description = "Описание новое" workflow_id="" issue_priority="HI" creation_date="2020-11-1" executor_id="1" reporter_id="" current_status_of_workflow ="CLOSE_ISSUE"/>
+
+    <issues_child id="1" issue_type = "EPIC" title ="Главная задача" parent_issue_id = "" sprint_id="" backlog_id="1" description = "Описание" workflow_id="1" issue_priority="HI" creation_date="2012-11-1" executor_id="1" reporter_id="" current_status_of_workflow ="OPEN_ISSUE"/>
+    <issues_child id="2" issue_type = "STORY" title ="child" parent_issue_id = "1" sprint_id="" backlog_id="1" description = "Описание" workflow_id="1" issue_priority="HI" creation_date="2012-11-1" executor_id="1" reporter_id="" current_status_of_workflow ="OPEN_ISSUE"/>
+
+    <issues_delete id="1" issue_type = "EPIC" title ="Задача1" parent_issue_id = "" sprint_id="" backlog_id="1" description = "Описание" workflow_id="1" issue_priority="HI" creation_date="2012-11-1" executor_id="1" reporter_id="" current_status_of_workflow ="OPEN_ISSUE"/>
+    <issues_delete id="3" issue_type = "EPIC" title ="Задача3" parent_issue_id = "" sprint_id="" backlog_id="1" description = "Описание" workflow_id="3" issue_priority="HI" creation_date="2012-11-1" executor_id="1" reporter_id="" current_status_of_workflow ="OPEN_ISSUE"/>
+
+    <issues_to_sprint id="1" issue_type = "EPIC" title ="Задача1" parent_issue_id = "" sprint_id="1" backlog_id="" description = "Описание" workflow_id="1" issue_priority="HI" creation_date="2012-11-1" executor_id="1" reporter_id="" current_status_of_workflow ="OPEN_ISSUE"/>
+
+    <issues_to_backlog id="1" issue_type = "EPIC" title ="Задача1" parent_issue_id = "" sprint_id="" backlog_id="1" description = "Описание" workflow_id="1" issue_priority="HI" creation_date="2012-11-1" executor_id="1" reporter_id="" current_status_of_workflow ="OPEN_ISSUE"/>
+
+    <workflows_create id="1" name = "Workflow1"/>
+    <workflows_create id="2" name = "Workflow2"/>
+    <workflows_create id="3" name = "Workflow3"/>
+
+    <workflow_statuses_add id="1" workflow_id = "1" status_name = "OPEN_ISSUE"/>
+    <workflow_statuses_add id="2" workflow_id = "1" status_name = "CLOSE_ISSUE"/>
+
+    <workflow_statuses_remove id="1" workflow_id = "1" status_name = "OPEN_ISSUE"/>
+    <workflow_statuses_remove id="2" workflow_id = "1" status_name = "INPROGRESS_ISSUE"/>
+    <workflow_statuses_remove id="3" workflow_id = "1" status_name = "TEST_ISSUE"/>
+</dataset>
